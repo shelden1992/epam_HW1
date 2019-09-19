@@ -3,12 +3,14 @@ package part1;
 import java.util.Scanner;
 
 public class ConverterBinaryToDecimal {
+    private static String binaryString = null;
+
     public static void main(String[] args) {
+
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter binary number");
-            String binaryString = null;
-            while (!(binaryString = scanner.nextLine()).equalsIgnoreCase("exit") && !binaryString.isEmpty()) {
+            while (conditionExit(scanner)) {
                 int decimal = 0, step = 0;
                 try {
                     int binaryInt = Integer.parseInt(binaryString);
@@ -28,14 +30,12 @@ public class ConverterBinaryToDecimal {
                     System.out.println("Please try again, you enter wrong binary number");
                 }
             }
-
-
         }
-
     }
 
+    static private boolean conditionExit(Scanner scanner) {
 
+        return !(binaryString = scanner.nextLine()).equalsIgnoreCase("exit") && !binaryString.isEmpty();
+
+    }
 }
-/**
- * or System.out.println(Integer.parseInt(binaryString, 2)), but it's not interesting
- */
