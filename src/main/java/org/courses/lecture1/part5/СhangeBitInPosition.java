@@ -1,4 +1,4 @@
-package part5;
+package org.courses.lecture1.part5;
 
 public class СhangeBitInPosition {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package part2;
+package org.courses.lecture1.part2;
 
 public class ConvertPositiveToNegative {
     public static void main(String[] args) {
