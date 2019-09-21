@@ -1,4 +1,4 @@
-package org.courses.lecture1.part3;
+package  org.courses.part3;
 
 public class СountBit {
     public static void main(String[] args) {

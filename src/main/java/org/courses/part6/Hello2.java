@@ -1,4 +1,4 @@
-package org.courses.lecture1.part6;
+package org.courses.part6;
 
 public class Hello2 {
     public static void main(String[] args) {
