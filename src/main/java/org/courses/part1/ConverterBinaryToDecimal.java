@@ -3,14 +3,19 @@ package org.courses.part1;
 import java.util.Scanner;
 
 public class ConverterBinaryToDecimal {
-    private static String binaryString = null;
+//    private static String  = null;
 
     public static void main(String[] args) {
 
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter binary number");
-            while (conditionExit(scanner)) {
+
+            String binaryString;
+            while ((binaryString = scanner.nextLine()) != null) {
+                if (conditionExit(binaryString)) {
+                    break;
+                }
                 try {
                     int decimal = convertMethod(binaryString);
                     System.out.printf("Your's binary number %s is %d in decimal \n", binaryString, decimal);
@@ -23,26 +28,24 @@ public class ConverterBinaryToDecimal {
         }
     }
 
-    static private boolean conditionExit(Scanner scanner) {
+    static public boolean conditionExit(String strScanner) {
 
-        return !(binaryString = scanner.nextLine()).equalsIgnoreCase("exit") && !binaryString.isEmpty();
+        return strScanner.equalsIgnoreCase("exit") || strScanner.isEmpty();
 
     }
 
-    static private int convertMethod(String binaryString) {
-        int binaryInt = Integer.parseInt(binaryString);
+    public static int convertMethod(String binaryString) {
         int decimal = 0, step = 0;
+        int binaryInt = Integer.parseInt(binaryString);
         while (binaryInt != 0) {
             String checkCorrectEnterBinary = binaryString.substring(binaryString.length() - 1 - step, binaryString.length() - step);
             if (Integer.parseInt(checkCorrectEnterBinary) > 1 || binaryInt < 0) {
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Not valid binary number");
             }
             decimal += (binaryInt % 10) * Math.pow(2, step);
             binaryInt = binaryInt / 10;
             step++;
         }
         return decimal;
-
-
     }
 }

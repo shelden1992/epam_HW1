@@ -1,4 +1,4 @@
-package  org.courses.part3;
+package org.courses.part3;
 
 public class СountBit {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class СountBit {
         System.out.println("bit in long " + countBit(Long.MAX_VALUE));
     }
 
-    static int countBit(long value) {
+    public static int countBit(long value) {
         int count = 0;
         while (value > 0) {
             count++;
@@ -18,7 +18,7 @@ public class СountBit {
         return count + 1;
     }
 
-    static int countBit(int value) {
+    public static int countBit(int value) {
         int count = 0;
         while (value > 0) {
             count++;
@@ -27,7 +27,7 @@ public class СountBit {
         return count + 1;
     }
 
-    static int countBit(byte value) {
+    public static int countBit(byte value) {
         int count = 0;
         while (value > 0) {
             count++;
@@ -36,7 +36,7 @@ public class СountBit {
         return count + 1;
     }
 
-    static int countBit(short value) {
+    public static int countBit(short value) {
         int count = 0;
         while (value > 0) {
             count++;
