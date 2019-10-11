@@ -1,4 +1,4 @@
-`# Package Files #
+# Package Files #
 *.jar
 *.war
 *.nar
@@ -6,10 +6,11 @@
 *.zip
 *.tar.gz
 *.rar
+*.log
 
 # Compiled class file
 *.class
-
+logs/
 .idea
 *.iml
 
